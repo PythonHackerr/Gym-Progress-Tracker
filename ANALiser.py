@@ -7,13 +7,13 @@ from itertools import islice
 import datetime
 
 # Load the workout log file
-file_path = 'records_optimized_deadlift.csv'
+file_path = 'records.csv'
 workout_data = pd.read_csv(file_path)
 workout_data.head()
 
 plt.style.use('classic')
 
-START_DATE, END_DATE = "20.12.22", "31.03.24"
+START_DATE, END_DATE = "20.12.22", "10.04.24"
 
 colors = {
     "BENCH" : "blue",
@@ -144,7 +144,7 @@ new_dates = dates[::dates_freq]
 plt.xticks(ticks=range(0, len(dates), dates_freq), labels=new_dates)
 plt.xticks(rotation=45, fontsize=9)
 plt.ylabel('Average 1RM (kg) Estimate')
-plt.title('1RM Year Progression')
+plt.title('1 Rep Max Progression')
 plt.legend(loc='upper left')
 plt.grid(True)
 ax = plt.gca()
